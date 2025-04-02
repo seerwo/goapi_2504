@@ -2,8 +2,8 @@ package goapi_2504
 
 import (
 	"github.com/seerwo/goapi_2504/cache"
-	"github.com/seerwo/goapi_2504/mall_nafco"
-	mallConfig "github.com/seerwo/goapi_2504/mall_nafco/config"
+	"github.com/seerwo/goapi_2504/nafco"
+	mallConfig "github.com/seerwo/goapi_2504/nafco/config"
 	log "github.com/sirupsen/logrus"
 	"os"
 )
@@ -26,6 +26,6 @@ func (ga *GoApi2504) SetCache(cache cache.Cache) {
 	ga.cache = cache
 }
 
-func (ga *GoApi2504) GetMallNafco(cfg *mallConfig.Config) *mall_nafco.Nafco {
-	return mall_nafco.NewNafco(cfg)
+func (ga *GoApi2504) GetNafco(cfg *mallConfig.Config) *nafco.Nafco {
+	return nafco.NewNafco(cfg)
 }
